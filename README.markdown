@@ -1,5 +1,5 @@
-chemicaloliver.net wordpress theme
-==================================
+Orange Room Software Wordpress Theme
+====================================
 
 This theme is built on the html5-boilerplate-for-wordpress theme, which is in turn built on top of the [HTML5 Boilerplate](http://html5boilerplate.com/) by Paul Irish and Divya Manian.
 
