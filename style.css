@@ -58,10 +58,9 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 
 /* Content */
 #main{position:static;}
-#main article {margin-top:15px;}
+#main article:first-child{margin-top:15px;} 
 #main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;}
-#main article .attachment-thumbnail{float:left;margin-right:20px;border:solid 1px black;}
-#main article.sticky{margin:0;padding:0;}
+#main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
@@ -79,5 +78,3 @@ footer section{margin:10px;}
 .wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
 .wp-caption img{margin:0;padding:0;border:0 none;}
 .wp-caption-dd{font-size:11px;line-height:17px;padding:0 4px 5px;margin:0;}
-.sticky{background:#f7f7f7;padding:0 10px 10px;}
-.sticky h2{padding-top:10px;}
