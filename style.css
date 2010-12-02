@@ -20,7 +20,7 @@ body{width:960px;margin:0 auto;font:13px/1.5 'Helvetica Neue',Arial,'Liberation 
 /* Header */
 header section{text-align:center;}
 header section h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;color:black;}
-header section h2{font:bold italic 14pt/18pt 'Helvetica Neue';letter-spacing: 4px;}
+header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
 
 /* Navigation */
 nav{clear:both;}
