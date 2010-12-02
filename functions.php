@@ -69,7 +69,9 @@ function ors_javascripts() {
   wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'ors-jquery', null);
   wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
 }
-add_action('wp_print_scripts', 'ors_javascripts', 1);
+if (!is_admin()) {
+  add_action('wp_print_scripts', 'ors_javascripts', 1);
+}
 
 /**
  * Roll overs
