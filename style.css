@@ -26,7 +26,7 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #top-menu-container{clear:both;}
 #top-menu-container ul,
 #top-menu-container ul *{margin:0;padding:0;list-style:none;}
-#top-menu-container ul{line-height:1.0;background:#ccc;border-radius:4px;padding:0 10px;margin-bottom:20px;}
+#top-menu-container ul{line-height:1.0;background:#ccc;border-radius:4px;padding:0 10px;}
 #top-menu-container ul ul,
 #top-menu-container ul ul{position:absolute;top:-999em;width:15em;}
 #top-menu-container ul ul li{width:100%;}
@@ -58,8 +58,8 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 
 /* Content */
 #main{overflow:hidden;position:static;}
-#main .page section{display:block;margin:10px;padding:10px;}
-#main .page section p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;margin:0 auto;}
+#main article{display:block;margin:10px;padding:10px;}
+#main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;margin:0 auto;}
 .gallery .gallery-item{display:inline-block;float:left;}
 .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
