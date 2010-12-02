@@ -20,7 +20,7 @@ get_header(); ?>
     <?php while (have_posts()) : the_post(); ?>
 
       <article <?php post_class() ?>>
-        <h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+        <h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
         <time><?php the_time('l, F jS, Y') ?></time>
 
         <footer>
