@@ -61,6 +61,7 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main article {margin-top:15px;}
 #main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;}
 #main article .attachment-thumbnail{float:left;margin-right:20px;border:solid 1px black;}
+#main article.sticky{margin:0;padding:0;}
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
