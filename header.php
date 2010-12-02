@@ -20,8 +20,14 @@
   <body <?php body_class(); ?>>
     <header class='container_12'>
       <section class="grid_12">
-        <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-        <h3><?php bloginfo('description'); ?></h3>
+        <?php // Is there a header image?
+				if (get_header_image() != '') {
+				  echo '<a href="' . get_option("home") . '/"><img src="' . get_header_image() . '" width="' . HEADER_IMAGE_WIDTH . '" height="' . HEADER_IMAGE_HEIGHT . '" alt="Home" /></a>';
+				} else { 
+          echo '<h1><a href="' . get_option("home") . '/">' . get_bloginfo("name") . '</a></h1>';
+				} 
+				?>
+        <h2><?php bloginfo('description'); ?></h2>
       </section>
     </header>
     <?php wp_nav_menu(array('theme_location' => 'top', 'container' => 'nav', 'container_id' => 'top-menu-container', 'container_class' => 'container_12', 'menu_id' => 'top-menu', 'menu_class' => 'grid_12')); ?>

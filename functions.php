@@ -5,7 +5,15 @@
  */
 
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
+
+// rel_cononical kinda messes up some dynamic links
 remove_action ('wp_head', 'rel_canonical');
+
+// This theme uses post thumbnails
+add_theme_support( 'post-thumbnails' );
+
+// Add default posts and comments RSS feed links to head
+add_theme_support( 'automatic-feed-links' );
 
 # This theme uses wp_nav_menu().
 if ( function_exists( 'register_nav_menu' ) ) {
@@ -22,6 +30,24 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h2>',
 	));
 }
+
+// This theme allows users to set a custom background
+add_custom_background();
+
+// gets included in the site header
+function header_style() {
+  // Noop
+}
+
+// gets included in the admin header
+function admin_header_style() {
+  // Noop
+}
+
+define( 'HEADER_TEXTCOLOR', '' );
+define( 'HEADER_IMAGE_WIDTH', apply_filters( 'ors_header_image_width', 940 ) );
+define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'ors_header_image_height', 100 ) );
+add_custom_image_header('header_style', 'admin_header_style');
 
 /**
  * Stylesheets
