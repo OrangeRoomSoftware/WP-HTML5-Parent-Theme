@@ -50,6 +50,12 @@ nav ul ul li li li.sfHover ul{left:10em;top:0;}
 #main{overflow:hidden;position:static;}
 #main .page section{display:block;margin:10px;padding:10px;}
 #main .page section p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;margin:0 auto;}
+.gallery .gallery-item{display:inline-block;float:left;}
+.gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
+.gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
+.equipment{display:block;clear:both;overflow:hidden;}
+.equipment .title{font-weight:bold;clear:both;}
+.equipment ul{display:block;float:left;}
 
 /* Footer */
 footer section{margin:10px;}
