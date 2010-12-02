@@ -15,7 +15,8 @@ get_header(); ?>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
         </header>
         <section>
-          <?php the_content('Read more &#9660;'); ?>
+          <?php the_post_thumbnail('thumbnail'); ?>
+          <?php the_excerpt('Read more &#9660;'); ?>
         </section>
       </article>
     <?php endwhile; ?>

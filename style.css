@@ -57,9 +57,10 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #bottom-menu-container ul li a{text-decoration:none;}
 
 /* Content */
-#main{overflow:hidden;position:static;}
+#main{position:static;}
 #main article{display:block;margin:10px;padding:10px;}
 #main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;padding:10px 0px;margin:0 auto;}
+#main article .attachment-thumbnail{float:left;margin-right:20px;border:solid 1px black;}
 .gallery .gallery-item{display:inline-block;float:left;}
 .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
