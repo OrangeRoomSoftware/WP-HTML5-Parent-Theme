@@ -1,0 +1,28 @@
+/*
+Theme Name: Orange Room Software HTML5 Starting Point
+*/
+/*
+Used to style the TinyMCE editor.
+*/
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;background:transparent;text-decoration:none;}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+/* Blueprint Text */
+body{width:960px;margin:0 auto;font:13px 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}a:focus{outline:1px dotted}hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}h1{font-size:25px}h2{font-size:23px}h3{font-size:21px}h4{font-size:19px}h5{font-size:17px}h6{font-size:15px}ol{list-style:decimal}ul{list-style:disc}li{margin-left:30px}p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{margin:0px;}
+
+/* Content */
+p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
+.gallery .gallery-item{display:inline-block;float:left;}
+.gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
+.gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
+.equipment{display:block;clear:both;overflow:hidden;}
+.equipment .title{font-weight:bold;clear:both;}
+.equipment ul{display:block;float:left;}
+
+/* WordPress Required Styles */
+.aligncenter{display:block;margin-left:auto;margin-right:auto;}
+.alignleft{float:left;margin-right:10px;}
+.alignright{float:right;margin-left:10px;}
+.wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px;border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;}
+.wp-caption img{margin:0;padding:0;border:0 none;}
+.wp-caption-dd{font-size:11px;line-height:17px;padding:0 4px 5px;margin:0;}

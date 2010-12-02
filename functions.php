@@ -15,6 +15,9 @@ add_theme_support( 'post-thumbnails' );
 // Add default posts and comments RSS feed links to head
 add_theme_support( 'automatic-feed-links' );
 
+// Add my editor style
+add_editor_style();
+
 # This theme uses wp_nav_menu().
 if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'top', 'Top Navigation Menu' );
@@ -91,6 +94,14 @@ function rollover_shortcode_handler($atts) {
   );
 }
 add_shortcode('rollover', 'rollover_shortcode_handler');
+
+/**
+ * Increase the excerpt length
+ */
+function twentyten_excerpt_length( $length ) {
+	return 500;
+}
+add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
 
 /**
  * Get your CSS out of my Content!

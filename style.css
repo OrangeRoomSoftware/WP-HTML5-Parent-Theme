@@ -62,7 +62,7 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main article header h1{margin:0;}
 #main article header time{display:block;color:#999;}
 #main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}
-#main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;}
+#main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
@@ -76,8 +76,8 @@ footer section{margin:10px;}
 
 /* WordPress Required Styles */
 .aligncenter{display:block;margin-left:auto;margin-right:auto;}
-.alignleft{float:left;}
-.alignright{float:right;}
+.alignleft{float:left;margin-right:10px;}
+.alignright{float:right;margin-left:10px;}
 .wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px;border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;}
 .wp-caption img{margin:0;padding:0;border:0 none;}
 .wp-caption-dd{font-size:11px;line-height:17px;padding:0 4px 5px;margin:0;}
