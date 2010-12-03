@@ -29,7 +29,9 @@ p{margin:10px 0;font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-seri
 
 #vehicle #photos{margin:10px;}
 #vehicle label{display:inline-block;width:100px;margin-right:5px;text-align:right;}
+#vehicle #headline{text-align:center;color:red;}
 #vehicle #price{color:red;}
 
 .vehicle label{margin-right:0.5em;}
+.vehicle .excerpt-headline{font-weight:bold;font-size:16pt;}
 .vehicle .excerpt-price{font-weight:bold;font-size:16pt;}

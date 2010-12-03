@@ -20,7 +20,7 @@ body{width:960px;margin:0 auto;font:12px 'Helvetica Neue',Arial,'Liberation Sans
 /* Header */
 header section{text-align:center;}
 header section h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;color:black;}
-header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
+header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;text-shadow:2px 2px 5px #999;}
 
 /* Top Navigation */
 #top-menu-container{clear:both;}
@@ -59,7 +59,7 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main{position:static;}
 #main article{display:block;clear:both;overflow:hidden;margin-bottom:15px;}
 #main article:first-child{margin-top:15px;}
-#main article header h1{margin:0;}
+#main article header h1{margin:0;text-shadow:2px 2px 4px #999;}
 #main article header h1 a{font:bold 16pt/20pt 'Helvetica Neue';}
 #main article header time{display:none;}
 #main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}

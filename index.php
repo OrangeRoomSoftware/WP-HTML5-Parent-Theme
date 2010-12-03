@@ -15,7 +15,7 @@ get_header(); ?>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
         </header>
         <section>
-          <?php the_post_thumbnail('thumbnail'); ?>
+          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
           <?php the_excerpt('Read more &#9660;'); ?>
         </section>
       </article>
