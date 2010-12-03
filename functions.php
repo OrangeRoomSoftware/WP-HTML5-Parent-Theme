@@ -15,6 +15,10 @@ add_theme_support( 'post-thumbnails' );
 // Add default posts and comments RSS feed links to head
 add_theme_support( 'automatic-feed-links' );
 
+// Shortcodes in widgets and excerpts
+add_filter('widget_text', 'do_shortcode');
+add_filter( 'the_excerpt', 'do_shortcode');
+
 // Add my editor style
 add_editor_style();
 
@@ -123,3 +127,16 @@ function slideshow_shortcode_handler($options, $content) {
   return do_shortcode($content);
 }
 add_shortcode('slideshow', 'slideshow_shortcode_handler');
+
+/**
+ * Permalink shortcode
+ * [permalink text='Click to see more']
+ */
+function permalink_shortcode_handler($atts) {
+  extract(shortcode_atts(array('text' => ''), $atts));
+  return sprintf(
+    "<a title='%s' href='%s'>%s</a>", 
+    $text, get_permalink(), $text
+  );
+}
+add_shortcode('permalink', 'permalink_shortcode_handler');
