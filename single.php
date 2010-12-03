@@ -16,7 +16,6 @@ get_header(); ?>
     <section>
       <?php the_content('Read the rest of this entry &raquo;'); ?>
       <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-      <?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
     </section>
     <footer>
       <?php edit_post_link('Edit this entry','','.'); ?>

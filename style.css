@@ -33,12 +33,12 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #top-menu-container ul li:hover{visibility:inherit;}
 #top-menu-container ul li{float:left;position:relative;}
 #top-menu-container ul li li{}
-#top-menu-container ul a{display:block;color:black;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;}
+#top-menu-container ul a{display:block;color:black;font-weight:bold;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;}
 #top-menu-container ul li.current-menu-item a:hover,
 #top-menu-container ul a:hover{background:#aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
 #top-menu-container>ul>li.current-menu-item>a{background:white;}
 #top-menu-container ul li:hover ul,
-#top-menu-container ul li.sfHover ul{left:0;top:29px;z-index:99;padding:5px 0;border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border:solid 2px white;border-top:none;}
+#top-menu-container ul li.sfHover ul{left:0;top:28px;z-index:99;padding:5px 0;border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border:solid 2px white;border-top:none;}
 #top-menu-container ul ul li:hover li ul,
 #top-menu-container ul ul li.sfHover li ul{top:-999em;}
 #top-menu-container ul ul li li:hover ul,
@@ -57,12 +57,13 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 
 /* Content */
 #main{position:static;}
-#main article{display:block;clear:both;overflow:hidden;margin-bottom:10px;}
+#main article{display:block;clear:both;overflow:hidden;margin-bottom:15px;}
 #main article:first-child{margin-top:15px;}
 #main article header h1{margin:0;}
-#main article header time{display:block;color:#999;}
+#main article header h1 a{font:bold 16pt/20pt 'Helvetica Neue';}
+#main article header time{display:none;}
 #main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}
-#main article p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
+#main article p{margin:10px 0;font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}

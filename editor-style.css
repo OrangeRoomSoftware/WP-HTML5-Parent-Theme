@@ -11,7 +11,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 body{font:12px 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif}a:focus{outline:1px dotted}hr{border:0 #ccc solid;border-top-width:1px;clear:both;height:0}h1{font-size:25px}h2{font-size:23px}h3{font-size:21px}h4{font-size:19px}h5{font-size:17px}h6{font-size:15px}ol{list-style:decimal}ul{list-style:disc}li{margin-left:30px}p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{margin:0px;}
 
 /* Content */
-p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
+p{margin:10px 0;font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
 .gallery .gallery-item{display:inline-block;float:left;}
 .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
@@ -26,3 +26,10 @@ p{font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hid
 .wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px;border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;}
 .wp-caption img{margin:0;padding:0;border:0 none;}
 .wp-caption-dd{font-size:11px;line-height:17px;padding:0 4px 5px;margin:0;}
+
+#vehicle #photos{margin:10px;}
+#vehicle label{display:inline-block;width:100px;margin-right:5px;text-align:right;}
+#vehicle #price{color:red;}
+
+.vehicle label{margin-right:0.5em;}
+.vehicle .excerpt-price{font-weight:bold;font-size:16pt;}
