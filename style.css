@@ -20,25 +20,25 @@ body{width:960px;margin:0 auto;font:12px 'Helvetica Neue',Arial,'Liberation Sans
 /* Header */
 header section{text-align:center;}
 header section h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;color:black;}
-header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;text-shadow:2px 2px 5px #999;}
+header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
 
 /* Top Navigation */
 #top-menu-container{clear:both;}
 #top-menu-container ul,
 #top-menu-container ul *{margin:0;padding:0;list-style:none;}
-#top-menu-container ul{line-height:1.0;background:#ccc;border:solid 1px #aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;padding:0 10px;}
+#top-menu-container ul{line-height:1.0;background:#ccc;padding:0 10px;}
 #top-menu-container ul ul,
 #top-menu-container ul ul{position:absolute;top:-999em;width:15em;}
 #top-menu-container ul ul li{width:100%;}
 #top-menu-container ul li:hover{visibility:inherit;}
 #top-menu-container ul li{float:left;position:relative;}
 #top-menu-container ul li li{}
-#top-menu-container ul a{display:block;color:black;font:bold 11pt Helvetica;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;text-shadow:1px 1px 2px white;}
+#top-menu-container ul a{display:block;color:black;font:bold 11pt Helvetica;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;}
 #top-menu-container ul li.current-menu-item a:hover,
-#top-menu-container ul a:hover{background:#eee;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;text-shadow:none;}
-#top-menu-container>ul>li.current-menu-item>a{background:#eee;text-shadow:1px 1px 2px #bbb;}
+#top-menu-container ul a:hover{background:#eee;}
+#top-menu-container>ul>li.current-menu-item>a{background:#eee;}
 #top-menu-container ul li:hover ul,
-#top-menu-container ul li.sfHover ul{left:0;top:33px;z-index:99;padding:5px 0;border:solid 1px #aaa;border-top:none;border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;}
+#top-menu-container ul li.sfHover ul{left:0;top:33px;z-index:99;padding:5px 0;border:solid 1px #aaa;border-top:none;}
 #top-menu-container ul ul li:hover li ul,
 #top-menu-container ul ul li.sfHover li ul{top:-999em;}
 #top-menu-container ul ul li li:hover ul,
@@ -59,7 +59,7 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main{position:static;}
 #main article{display:block;clear:both;overflow:hidden;margin-bottom:15px;}
 #main article:first-child{margin-top:15px;}
-#main article header h1{margin:0;text-shadow:2px 2px 4px #999;}
+#main article header h1{margin:0;}
 #main article header h1 a{font:bold 16pt/20pt 'Helvetica Neue';}
 #main article header time{display:none;}
 #main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}
@@ -67,9 +67,6 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
-#main .equipment{display:block;clear:both;overflow:hidden;}
-#main .equipment .title{font-weight:bold;clear:both;}
-#main .equipment ul{display:block;float:left;}
 
 /* Footer */
 footer{clear:both;}
