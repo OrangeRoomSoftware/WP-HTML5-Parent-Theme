@@ -26,19 +26,19 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #top-menu-container{clear:both;}
 #top-menu-container ul,
 #top-menu-container ul *{margin:0;padding:0;list-style:none;}
-#top-menu-container ul{line-height:1.0;background:#ccc;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;padding:0 10px;}
+#top-menu-container ul{line-height:1.0;background:#ccc;border:solid 1px #aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;padding:0 10px;}
 #top-menu-container ul ul,
 #top-menu-container ul ul{position:absolute;top:-999em;width:15em;}
 #top-menu-container ul ul li{width:100%;}
 #top-menu-container ul li:hover{visibility:inherit;}
 #top-menu-container ul li{float:left;position:relative;}
 #top-menu-container ul li li{}
-#top-menu-container ul a{display:block;color:black;font-weight:bold;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;}
+#top-menu-container ul a{display:block;color:black;font:bold 11pt Helvetica;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;text-shadow:1px 1px 2px white;}
 #top-menu-container ul li.current-menu-item a:hover,
-#top-menu-container ul a:hover{background:#aaa;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;}
-#top-menu-container>ul>li.current-menu-item>a{background:white;}
+#top-menu-container ul a:hover{background:#eee;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;text-shadow:none;}
+#top-menu-container>ul>li.current-menu-item>a{background:#eee;text-shadow:1px 1px 2px #bbb;}
 #top-menu-container ul li:hover ul,
-#top-menu-container ul li.sfHover ul{left:0;top:28px;z-index:99;padding:5px 0;border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border:solid 2px white;border-top:none;}
+#top-menu-container ul li.sfHover ul{left:0;top:33px;z-index:99;padding:5px 0;border:solid 1px #aaa;border-top:none;border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;}
 #top-menu-container ul ul li:hover li ul,
 #top-menu-container ul ul li.sfHover li ul{top:-999em;}
 #top-menu-container ul ul li li:hover ul,
