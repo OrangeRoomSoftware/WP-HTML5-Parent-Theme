@@ -68,6 +68,11 @@ header section h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;mar
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
 
+/* Inventory */
+article.inventory{border:solid 1px #ccc;border-radius:5px;}
+article.inventory header h1{padding:2px 5px;border-bottom:solid 1px #ccc;background:#eee;}
+article.inventory section{display:block;padding:5px!important;overflow:hidden;}
+
 /* Footer */
 footer{clear:both;}
 footer section{margin:10px;}
