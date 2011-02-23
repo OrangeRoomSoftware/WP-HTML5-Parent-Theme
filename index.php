@@ -6,12 +6,12 @@
 
 get_header(); ?>
 
-<section id="main" role="main" class="container_12">
+<div id="main" role="main" class="container_12">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <article <?php post_class('grid_12') ?> id="post-<?php the_ID(); ?>">
         <header>
-          <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
         </header>
         <section>
@@ -27,7 +27,7 @@ get_header(); ?>
   <?php else : ?>
     <article <?php post_class('grid_12') ?> id="404-not-found">
       <header>
-        <h1>Not Found</h1>
+        <h2>Not Found</h2>
       </header>
       <section>
         <p>Sorry, but you are looking for something that isn't here.</p>
@@ -35,7 +35,7 @@ get_header(); ?>
       </section>
     </article>
   <?php endif; ?>
-</section>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

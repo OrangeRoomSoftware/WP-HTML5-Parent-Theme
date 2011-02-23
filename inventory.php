@@ -16,12 +16,12 @@ if($pagenum='') $pagenum = 1;
 $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&paged=" . $page_num );
 ?>
 
-<section id="main" role="main" class="container_12">
+<div id="main" role="main" class="container_12">
   <?php if (have_posts()) : ?>
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
       <article <?php post_class('grid_12 inventory') ?> id="post-<?php the_ID(); ?>">
         <header>
-          <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
         </header>
         <section>
@@ -38,7 +38,7 @@ $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&pa
   <?php else : ?>
     <article <?php post_class('grid_12') ?> id="404-not-found">
       <header>
-        <h1>Vehicle Not Found</h1>
+        <h2>Vehicle Not Found</h2>
       </header>
       <section>
         <p>Sorry, but you are looking for something that isn't here.</p>
@@ -46,7 +46,7 @@ $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&pa
       </section>
     </article>
   <?php endif; ?>
-</section>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

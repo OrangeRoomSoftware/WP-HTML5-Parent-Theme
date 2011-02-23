@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-<section id="main" role="main" class="container_12">
+<div id="main" role="main" class="container_12">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <article <?php post_class('grid_12') ?> id="page-<?php the_ID(); ?>">
@@ -26,7 +26,7 @@ get_header(); ?>
       </section>
     </article>
   <?php endif; ?>
-</section>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
