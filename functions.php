@@ -72,6 +72,7 @@ add_action('wp_print_styles', 'ors_stylesheets', 5);
  * jQuery, Cycle, Modernizer, and theme JS
  */
 function ors_javascripts() {
+  wp_deregister_script('jquery');
   wp_enqueue_script('ors-jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js", false, null);
   wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'ors-jquery', null);
   wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'ors-jquery', null);
