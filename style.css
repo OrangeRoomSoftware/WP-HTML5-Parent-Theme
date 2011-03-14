@@ -25,7 +25,8 @@ header hgroup h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;col
 header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
 
 /* Top Navigation */
-#top-menu-container{clear:both;}
+#top-menu-container{clear:both;overflow:hidden;}
+#top-menu-container #top-menu{overflow:hidden;}
 #top-menu-container ul,
 #top-menu-container ul *{list-style:none;}
 #top-menu-container ul{line-height:1.0;background:#ccc;}
