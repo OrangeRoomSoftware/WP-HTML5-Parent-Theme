@@ -6,6 +6,11 @@
 
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
 
+// Setup upload paths
+$uploads = wp_upload_dir();
+define('ORS_UPLOAD_DIR', $uploads['path']);
+define('ORS_UPLOAD_URL', $uploads['url']);
+
 // rel_cononical kinda messes up some dynamic links
 remove_action ('wp_head', 'rel_canonical');
 
