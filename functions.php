@@ -5,6 +5,7 @@
  */
 
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
+define('ORS_STYLESHEET_URL', str_replace('/style.css', '', get_bloginfo('stylesheet_url')));
 
 // Setup upload paths
 $uploads = wp_upload_dir();
