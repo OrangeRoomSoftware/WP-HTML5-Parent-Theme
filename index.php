@@ -16,7 +16,7 @@ get_header(); ?>
         </header>
         <section>
           <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-          <?php the_excerpt('Read more &#9660;'); ?>
+          <?php the_content('Read more &#9660;'); ?>
         </section>
       </article>
     <?php endwhile; ?>
