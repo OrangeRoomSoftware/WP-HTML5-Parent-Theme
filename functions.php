@@ -44,6 +44,12 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+// Register widget zones for Home Page template
+register_sidebar( array('name' => 'Top Widget-Zone',     'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Sidebar Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Content Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Bottom Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+
 // This theme allows users to set a custom background
 add_custom_background();
 
