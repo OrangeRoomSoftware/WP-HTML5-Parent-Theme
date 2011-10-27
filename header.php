@@ -15,7 +15,7 @@
     <style type="text/css" media="screen">
       <?php echo 'html{background-image:url("' . ORS_UPLOAD_URL . '/background.jpg");}'; ?>
     </style>
-    } ?>
+    <?php } ?>
   </head>
   <body <?php body_class(); ?>>
     <header class='container_12'>
