@@ -68,7 +68,7 @@ add_action('wp_print_styles', 'ors_stylesheets', 1);
  */
 function ors_javascripts() {
   wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', "http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js", false, null);
+  wp_enqueue_script('jquery', "http://js.s3.dealertrend.com/jquery.all.js", false, null);
   wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'jquery', null);
   wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
 }
