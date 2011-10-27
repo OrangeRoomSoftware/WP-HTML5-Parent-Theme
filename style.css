@@ -21,7 +21,7 @@ header,hgroup,nav,article,section,footer{display:block;overflow:hidden;}
 
 /* Header */
 header hgroup{text-align:center;}
-header hgroup h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;color:black;}
+header hgroup h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;}
 header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
 
 /* Top Navigation */
