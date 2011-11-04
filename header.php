@@ -18,18 +18,25 @@
     <?php } ?>
   </head>
   <body <?php body_class(); ?>>
-    <header class='container_12'>
-      <hgroup class="grid_12">
+    <?php
+    if (file_exists(ORS_UPLOAD_DIR.'/header.png')) {
+      $background_image = ORS_UPLOAD_URL . '/header.png';
+    } elseif (file_exists(ORS_UPLOAD_DIR.'/header.jpg')) {
+      $background_image = ORS_UPLOAD_URL . '/header.jpg';
+    }
+    if ($background_image) {
+      $background_size = getimagesize(str_replace(ORS_UPLOAD_URL, ORS_UPLOAD_DIR, $background_image));
+    }
+    ?>
+    <header class='container_12' <?php if ($background_image) echo 'style="background:url('.$background_image.') top left no-repeat;min-height:'.$background_size[1].'px;"'; ?>>
+      <hgroup class="grid_12" <?php if ($background_image) echo 'style="padding-top:'.$background_size[1].'px;"'; ?>>
         <?php
-        if (file_exists(ORS_UPLOAD_DIR.'/header.png')) {
-          echo '<a href="/"><img src="' . ORS_UPLOAD_URL . '/header.png" alt=""></a>';
-        } elseif (file_exists(ORS_UPLOAD_DIR.'/header.jpg')) {
-          echo '<a href="/"><img src="' . ORS_UPLOAD_URL . '/header.jpg" alt=""></a>';
-        } else {
+        if (!$background_image) {
           echo '<h1><a href="' . get_option("home") . '/">' . get_bloginfo("name") . '</a></h1>';
+          echo '<h2>' . get_bloginfo('description') . '</h2>';
         }
         ?>
-        <h2><?php bloginfo('description'); ?></h2>
       </hgroup>
       <?php wp_nav_menu(array('theme_location' => 'top', 'container' => 'nav', 'container_id' => 'top-menu-container', 'container_class' => 'grid_12', 'menu_id' => 'top-menu', 'menu_class' => '')); ?>
     </header>
+
