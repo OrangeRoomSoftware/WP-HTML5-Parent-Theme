@@ -37,6 +37,10 @@
         }
         ?>
       </hgroup>
-      <?php wp_nav_menu(array('theme_location' => 'top', 'container' => 'nav', 'container_id' => 'top-menu-container', 'container_class' => 'grid_12', 'menu_id' => 'top-menu', 'menu_class' => '')); ?>
+      <?php
+        if ( has_nav_menu('top') ) {
+          wp_nav_menu(array('theme_location' => 'top', 'container' => 'nav', 'container_id' => 'top-menu-container', 'container_class' => 'grid_12', 'menu_id' => 'top-menu', 'menu_class' => ''));
+        }
+      ?>
     </header>
 
