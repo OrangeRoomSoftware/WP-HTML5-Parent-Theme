@@ -51,6 +51,7 @@ register_sidebar( array('name' => 'Top Widget-Zone',     'before_widget' => '', 
 register_sidebar( array('name' => 'Sidebar Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Content Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Bottom Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Footer Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 
 /**
  * Stylesheets

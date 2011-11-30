@@ -12,6 +12,7 @@
         }
       ?>
       <section class="grid_12">
+        <?php dynamic_sidebar("footer-widget-zone"); ?>
         <?php wp_footer(); ?>
       </section>
     </footer>
