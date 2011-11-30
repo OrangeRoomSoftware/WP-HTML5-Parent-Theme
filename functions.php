@@ -33,6 +33,7 @@ add_editor_style();
 if ( function_exists( 'register_nav_menu' ) ) {
   register_nav_menu( 'top', 'Top Navigation Menu' );
   register_nav_menu( 'bottom', 'Bottom Navigation Menu' );
+  register_nav_menu( 'sidebar', 'Sidebar Navigation Menu' );
 }
 
 // Widgetized Sidebar HTML5 Markup
