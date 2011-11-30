@@ -60,7 +60,7 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 
 /* Content */
 #main{position:static;}
-#main article{clear:both;overflow:hidden;margin-bottom:15px;}
+#main article{overflow:hidden;margin-bottom:15px;}
 #main article:first-child{margin-top:15px;}
 #main article header h2{margin:0;}
 #main article header h2 a{font:bold 16pt/20pt 'Helvetica Neue';}

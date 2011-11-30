@@ -4,9 +4,5 @@
  * @subpackage HTML5_Boilerplate
  */
 ?>
-<aside id="sidebar">
-  <nav role="navigation">
-   <?php wp_nav_menu( array( 'theme_location' => 'primary','fallback_cb'=> '' ) ); ?>
-  </nav>
-</aside>
+<?php wp_nav_menu( array( 'theme_location' => 'sidebar', 'container' => 'nav', 'container_id' => 'sidebar-container', 'container_class' => 'grid_3', 'menu_id' => 'sidebar-menu', 'menu_class' => '')); ?>
 
