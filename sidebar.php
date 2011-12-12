@@ -6,7 +6,11 @@
 ?>
 <?php
   if ( has_nav_menu('sidebar') ) {
-    wp_nav_menu( array( 'theme_location' => 'sidebar', 'container' => 'nav', 'container_id' => 'sidebar-container', 'container_class' => 'grid_2', 'menu_id' => 'sidebar-menu', 'menu_class' => ''));
+    echo "<div id='sidebar-container' class='grid_2'>";
+    dynamic_sidebar("above-menu-widget-zone");
+    wp_nav_menu( array( 'theme_location' => 'sidebar', 'container' => 'nav', 'container_id' => '', 'container_class' => '', 'menu_id' => 'sidebar-menu', 'menu_class' => ''));
+    dynamic_sidebar("below-menu-widget-zone");
+    echo "</div>";
   }
 ?>
 
