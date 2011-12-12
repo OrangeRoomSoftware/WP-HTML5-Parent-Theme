@@ -25,31 +25,33 @@ header hgroup h1 a{font:bold 28pt/30pt 'Helvetica Neue';text-decoration:none;}
 header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;margin:0 0 10px 0;}
 
 /* Top Navigation */
-#top-menu-container{clear:both;overflow:hidden;}
-#top-menu-container #top-menu{overflow:hidden;}
-#top-menu-container ul,
-#top-menu-container ul *{list-style:none;}
-#top-menu-container ul{line-height:1.0;background:#ccc;}
-#top-menu-container ul ul,
-#top-menu-container ul ul{position:absolute;top:-999em;width:15em;}
-#top-menu-container ul ul li{width:100%;}
-#top-menu-container ul li{float:left;position:relative;margin-left:10px;}
-#top-menu-container ul li:hover{visibility:inherit;}
-#top-menu-container ul li li{}
-#top-menu-container ul a{display:block;color:black;font:bold 11pt Helvetica;text-decoration:none;margin:0 5px;padding:8px 5px;position:relative;}
-#top-menu-container ul li.current-menu-item a:hover,
-#top-menu-container ul a:hover{background:#eee;}
-#top-menu-container>ul>li.current-menu-item>a{background:#eee;}
-#top-menu-container ul li:hover ul,
-#top-menu-container ul li.sfHover ul{left:0;top:33px;z-index:99;padding:5px 0;border:solid 1px #aaa;border-top:none;}
-#top-menu-container ul ul li:hover li ul,
-#top-menu-container ul ul li.sfHover li ul{top:-999em;}
-#top-menu-container ul ul li li:hover ul,
-#top-menu-container ul ul li li.sfHover ul{left:10em;top:0;}
-#top-menu-container ul ul li li:hover li ul,
-#top-menu-container ul ul li li.sfHover li ul{top:-999em;}
-#top-menu-container ul ul li li li:hover ul,
-#top-menu-container ul ul li li li.sfHover ul{left:10em;top:0;}
+#top-menu-container{margin:0;width:960px;clear:both;overflow:hidden;}
+#top-menu{background:#eee;color:black;width:958px;}
+#top-menu,
+#top-menu ul{float:left;list-style:none;margin:0;padding:0;border:1px solid #555;}
+#top-menu a,
+#top-menu li ul li a{display:block;color:black;text-decoration:none;padding:10px 10px;margin:0 10px;}
+#top-menu li ul{margin-left:10px;}
+#top-menu li ul li a{margin:0;}
+#top-menu a:hover,
+#sub-menu a:hover{background:#777;color:white;}
+#top-menu>li{float:left;padding:0;margin:0;}
+#top-menu ul{position:absolute;left:-999em;height:auto;min-width:150px;margin:0;line-height:1;}
+#top-menu li li{min-width:150px;list-style:none;margin:0;padding:0;}
+#top-menu li:hover ul ul,
+#top-menu li:hover ul ul ul,
+#top-menu li:hover ul ul ul ul,
+#top-menu li.sfhover ul ul,
+#top-menu li.sfhover ul ul ul,
+#top-menu li.sfhover ul ul ul ul{left:-999em;}
+#top-menu li:hover ul,
+#top-menu li li:hover ul,
+#top-menu li li li:hover ul,
+#top-menu li li li li:hover ul,
+#top-menu li.sfhover ul,
+#top-menu li li.sfhover ul,
+#top-menu li li li.sfhover ul,
+#top-menu li li li li.sfhover ul{left:auto;background:#eee;}
 
 /* Bottom Navigation */
 #bottom-menu-container ul,
@@ -87,3 +89,7 @@ footer section{margin:10px;}
 .wp-caption{border:1px solid #ddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px;border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;}
 .wp-caption img{margin:0;padding:0;border:0 none;}
 .wp-caption-dd{font-size:11px;line-height:17px;padding:0 4px 5px;margin:0;}
+
+/* Misc */
+table tr td { font-size: 12pt }
+

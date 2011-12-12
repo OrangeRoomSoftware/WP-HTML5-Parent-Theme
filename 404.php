@@ -6,7 +6,8 @@
 
 get_header(); ?>
 <div id="main" role="main" class="container_12">
-  <article id="404-not-found" class='grid_12'>
+  <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
+  <article class="<?php echo 'grid_' . $grid; ?>" id="404-not-found">
     <section>
       <h2>Not Found</h2>
       <p>Sorry, but you are looking for something that isn't here.</p>

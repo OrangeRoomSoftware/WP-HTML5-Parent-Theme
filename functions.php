@@ -47,9 +47,11 @@ if ( function_exists('register_sidebar') ) {
 }
 
 // Register widget zones for Home Page template
-register_sidebar( array('name' => 'Top Widget-Zone',     'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Top Widget Zone',     'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Sidebar Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Content Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Above Menu Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
+register_sidebar( array('name' => 'Below Menu Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Bottom Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 register_sidebar( array('name' => 'Footer Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 
@@ -71,6 +73,8 @@ add_action('wp_print_styles', 'ors_stylesheets', 1);
 function ors_javascripts() {
   wp_deregister_script('jquery');
   wp_enqueue_script('jquery', "http://js.s3.dealertrend.com/jquery.all.js", false, null);
+  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", false, null);
   wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'jquery', null);
   wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
 }

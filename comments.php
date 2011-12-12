@@ -21,7 +21,7 @@
   <h3 id="comments"><?php the_title(); ?></h3>
 
   <ol class="commentlist">
-  <?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+  <?php wp_list_comments('type=comment'); ?>
   </ol>
 
  <?php else : // this is displayed if there are no comments so far ?>
@@ -63,7 +63,7 @@
     <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> /></label>
   </p>
 
- 
+
 
   <?php endif; ?>
 

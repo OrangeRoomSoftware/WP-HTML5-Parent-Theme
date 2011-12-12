@@ -7,7 +7,6 @@ get_header(); ?>
 
 <div id="main" role="main" class="container_12">
   <?php get_sidebar(); ?>
-
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
       <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>

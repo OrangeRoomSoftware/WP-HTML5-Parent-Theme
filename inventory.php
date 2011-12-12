@@ -8,7 +8,7 @@
 Template Name: Inventory
 */
 
-get_header(); 
+get_header();
 
 global $wp_query;
 $page_num = $paged;
@@ -17,9 +17,11 @@ $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&pa
 ?>
 
 <div id="main" role="main" class="container_12">
+  <?php get_sidebar(); ?>
   <?php if (have_posts()) : ?>
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-      <article <?php post_class('grid_12 inventory') ?> id="post-<?php the_ID(); ?>">
+      <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
+      <article <?php post_class('inventory grid_' . $grid) ?> id="post-<?php the_ID(); ?>">
         <header>
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
@@ -48,5 +50,4 @@ $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&pa
   <?php endif; ?>
 </div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
