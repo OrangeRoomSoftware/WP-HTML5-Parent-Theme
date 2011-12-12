@@ -3,34 +3,37 @@
  * @package WordPress
  * @subpackage HTML5_Boilerplate
  */
-
 get_header(); ?>
 
 <div id="main" role="main" class="container_12">
+  <?php get_sidebar(); ?>
+  <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
   <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <article <?php post_class('grid_12') ?> id="post-<?php the_ID(); ?>">
-        <header>
-          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-          <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
-        </header>
-        <section>
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-          <?php
-            $excerpt = get_the_excerpt('Read more &#9660;'); 
-            if ($excerpt != '') {
-              echo $excerpt;
-            } else {
-              the_content('Read more &#9660;');
-            }
-          ?>
-        </section>
-      </article>
-    <?php endwhile; ?>
-    <nav>
-      <div id="older"><?php next_posts_link('&#9664; Older Entries') ?></div>
-      <div id="newer"><?php previous_posts_link('Newer Entries &#9654;') ?></div>
-    </nav>
+    <div class="articles grid_<?php echo $grid; ?>">
+      <?php while (have_posts()) : the_post(); ?>
+        <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+          <header>
+            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
+          </header>
+          <section>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+            <?php
+              $excerpt = get_the_excerpt('Read more &#9660;');
+              if ($excerpt != '') {
+                echo $excerpt;
+              } else {
+                the_content('Read more &#9660;');
+              }
+            ?>
+          </section>
+        </article>
+      <?php endwhile; ?>
+      <nav>
+        <div id="older"><?php next_posts_link('&#9664; Older Entries') ?></div>
+        <div id="newer"><?php previous_posts_link('Newer Entries &#9654;') ?></div>
+      </nav>
+    </div>
   <?php else : ?>
     <article <?php post_class('grid_12') ?> id="404-not-found">
       <header>
@@ -44,5 +47,4 @@ get_header(); ?>
   <?php endif; ?>
 </div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

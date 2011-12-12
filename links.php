@@ -11,6 +11,8 @@ Template Name: Links
 
 <?php get_header(); ?>
 
+<?php get_sidebar(); ?>
+
 <div id="main">
 
   <h2>Links:</h2>
@@ -19,7 +21,5 @@ Template Name: Links
   </ul>
 
 </div>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
