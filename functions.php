@@ -70,16 +70,18 @@ add_action('wp_print_styles', 'ors_stylesheets', 1);
  *
  * jQuery, Cycle, Modernizer, and theme JS
  */
-function ors_javascripts() {
-  wp_deregister_script('jquery');
-  wp_enqueue_script('jquery', "http://js.s3.dealertrend.com/jquery.all.js", false, null);
-  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
-  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", false, null);
-  wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'jquery', null);
-  wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
-}
-if (!is_admin()) {
-  add_action('wp_print_scripts', 'ors_javascripts', 5);
+if (!function_exists('ors_javascripts')) {
+	function ors_javascripts() {
+	  wp_deregister_script('jquery');
+	  wp_enqueue_script('jquery', "http://js.s3.dealertrend.com/jquery.all.js", false, null);
+	  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+	  // wp_enqueue_script('jquery', "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", false, null);
+	  wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'jquery', null);
+	  wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
+	}
+	if (!is_admin()) {
+	  add_action('wp_print_scripts', 'ors_javascripts', 5);
+	}
 }
 
 /**
