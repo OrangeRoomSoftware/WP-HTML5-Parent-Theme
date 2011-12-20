@@ -5,7 +5,11 @@
  */
 get_header(); ?>
 
-<div id="main" role="main" class="container_12">
+<div id="main" class="container_12">
+  <div class="grid_12 top-widget-zones" id="top-widget-zone">
+    <?php dynamic_sidebar("top-widget-zone"); ?>
+  </div>
+
   <?php get_sidebar(); ?>
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
@@ -29,6 +33,9 @@ get_header(); ?>
     </article>
   <?php endif; ?>
 
+  <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
+    <?php dynamic_sidebar("bottom-widget-zone"); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>

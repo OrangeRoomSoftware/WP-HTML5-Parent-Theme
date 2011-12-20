@@ -19,7 +19,7 @@ get_header(); ?>
     <?php dynamic_sidebar("sidebar-widget-zone"); ?>
   </div>
 
-   <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
+  <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
     <?php dynamic_sidebar("bottom-widget-zone"); ?>
   </div>
 </div>
