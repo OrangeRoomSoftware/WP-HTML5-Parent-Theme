@@ -13,7 +13,14 @@ get_header(); ?>
   <?php get_sidebar(); ?>
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-      <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
+      <?php if ( is_dynamic_sidebar( 'sidebar-widget-zone' ) or has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
+			<?php if ( is_dynamic_sidebar( 'sidebar-widget-zone' ) ) {  ?>
+			<aside class="grid_2">
+        <section id="sidebar">
+          <?php dynamic_sidebar("sidebar-widget-zone"); ?>
+        </section>
+			</aside>
+			<?php } ?>
       <article <?php post_class('grid_' . $grid) ?> id="page-<?php the_ID(); ?>">
         <section>
           <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
