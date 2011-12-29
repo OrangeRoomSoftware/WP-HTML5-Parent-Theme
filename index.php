@@ -17,15 +17,10 @@ get_header(); ?>
             <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
           </header>
           <section>
+            <?php if ( has_post_thumbnail() ) { ?>
             <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-            <?php
-              $excerpt = get_the_excerpt('Read more &#9660;');
-              if ($excerpt != '') {
-                echo $excerpt;
-              } else {
-                the_content('Read more &#9660;');
-              }
-            ?>
+            <?php } ?>
+            <?php the_excerpt(); ?>
           </section>
         </article>
       <?php endwhile; ?>

@@ -76,8 +76,9 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 #main article p,
 #main article ul,
 #main article ol{margin-bottom:8px;font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
+#main article .featured-image {margin:10px;}
 #main table tr th,
-#main table tr td { font-size: 12pt }
+#main table tr td {font-size: 12pt}
 #main .gallery .gallery-item{display:inline-block;float:left;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}

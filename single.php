@@ -10,12 +10,14 @@ get_header(); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
   <article <?php post_class('grid_' . $grid) ?> id="post-<?php the_ID(); ?>">
-    <?php if ( has_post_thumbnail( $post->ID ) ) echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     <header>
       <h2><?php the_title(); ?></a></h2>
       <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
     </header>
     <section>
+      <div class="featured-image">
+        <?php if ( has_post_thumbnail( $post->ID ) ) echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+      </div>
       <?php the_content('Read the rest of this entry &raquo;'); ?>
       <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
     </section>
