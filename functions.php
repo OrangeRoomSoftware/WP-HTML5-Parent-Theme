@@ -27,7 +27,9 @@ add_filter( 'the_excerpt', 'do_shortcode' );
 add_filter( 'get_the_excerpt', 'do_shortcode' );
 
 // Add my editor style
-add_editor_style();
+if (is_admin()) {
+  add_editor_style();
+}
 
 # This theme uses wp_nav_menu().
 if ( function_exists( 'register_nav_menu' ) ) {
@@ -63,7 +65,9 @@ $footer_widget_zone_id = register_sidebar( array('name' => 'Footer Widget Zone',
 function ors_stylesheets() {
   wp_enqueue_style('ors-style', get_bloginfo('stylesheet_url'), 'ors-960', null, 'all');
 }
-add_action('wp_print_styles', 'ors_stylesheets', 1);
+if (!is_admin()) {
+  add_action('wp_print_styles', 'ors_stylesheets', 1);
+}
 
 /**
  * Javascripts
