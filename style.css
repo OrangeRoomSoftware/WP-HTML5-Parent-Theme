@@ -54,6 +54,7 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 #top-menu li li.sfhover ul,
 #top-menu li li li.sfhover ul,
 #top-menu li li li li.sfhover ul{left:auto;background:#eee;}
+#top-menu .sub-menu{z-index:1000}
 
 /* Bottom Navigation */
 #bottom-menu-container ul,
@@ -63,9 +64,9 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 #bottom-menu-container ul li a{text-decoration:none;}
 
 /* Content */
-#main{position:static;}
-#main article{overflow:hidden;margin-bottom:15px;}
-#main article:first-child{margin-top:15px;}
+#main{position:static;overflow:hidden;}
+#main .articles{margin-top:15px;}
+#main article{margin-bottom:7.5px;}
 #main article header h2{margin:0;}
 #main article header h2 a{font:bold 16pt/20pt 'Helvetica Neue';}
 #main article header time{display:none;}
