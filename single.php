@@ -15,9 +15,11 @@ get_header(); ?>
       <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
     </header>
     <section>
+      <?php if ( has_post_thumbnail( $post->ID ) ) { ?>
       <div class="featured-image">
-        <?php if ( has_post_thumbnail( $post->ID ) ) echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+        <?php the_post_thumbnail( $post->ID, 'large' ); ?>
       </div>
+      <?php } ?>
       <?php the_content('Read the rest of this entry &raquo;'); ?>
       <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
     </section>
