@@ -10,17 +10,10 @@ get_header(); ?>
     <?php dynamic_sidebar("top-widget-zone"); ?>
   </div>
 
-  <?php get_sidebar(); ?>
+  <?php include_once('sidebar.php'); ?>
+
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-      <?php if ( is_active_sidebar( $sidebar_widget_zone_id ) or has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
-			<?php if ( is_active_sidebar( $sidebar_widget_zone_id ) ) {  ?>
-			<aside class="grid_2">
-        <section id="sidebar">
-          <?php dynamic_sidebar("sidebar-widget-zone"); ?>
-        </section>
-			</aside>
-			<?php } ?>
       <article <?php post_class('grid_' . $grid) ?> id="page-<?php the_ID(); ?>">
         <section>
           <?php if ( has_post_thumbnail( $post->ID ) ) { ?>

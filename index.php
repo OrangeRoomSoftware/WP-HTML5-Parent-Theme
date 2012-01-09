@@ -5,9 +5,13 @@
  */
 get_header(); ?>
 
-<div id="main" role="main" class="container_12">
-  <?php get_sidebar(); ?>
-  <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
+<div id="main" class="container_12">
+  <div class="grid_12 top-widget-zones" id="top-widget-zone">
+    <?php dynamic_sidebar("top-widget-zone"); ?>
+  </div>
+
+  <?php include_once('sidebar.php'); ?>
+
   <?php if (have_posts()) : ?>
     <div class="articles grid_<?php echo $grid; ?>">
       <?php while (have_posts()) : the_post(); ?>
