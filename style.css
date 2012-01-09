@@ -56,6 +56,13 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 #top-menu li li li li.sfhover ul{left:auto;background:#eee;}
 #top-menu .sub-menu{z-index:1000}
 
+/* Side Navigation */
+#sidebar-menu-container{margin-bottom:10px;}
+#sidebar-menu-container ul,
+#sidebar-menu-container ul *{margin:0;padding:0;list-style:none;}
+#sidebar-menu-container ul li{display:inline;margin:0px;padding:0px;}
+#sidebar-menu-container ul li a{text-decoration:none;}
+
 /* Bottom Navigation */
 #bottom-menu-container ul,
 #bottom-menu-container ul *{margin:0;padding:0;list-style:none;}
@@ -84,6 +91,8 @@ header hgroup h2{font:bold italic 16pt 'Helvetica Neue';letter-spacing: 3px;marg
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
 #main #sidebar{overflow:hidden;padding:10px 0;}
+
+#main aside{float:left;clear:left;}
 
 /* Inventory */
 article.inventory{border:solid 1px #ccc;border-radius:5px;}
