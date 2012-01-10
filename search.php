@@ -1,12 +1,8 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
 
 get_header(); ?>
 
-  <div id="main" role="main">
+  <div id="main" class="container_12 search">
 
   <?php if (have_posts()) : ?>
 
@@ -24,7 +20,7 @@ get_header(); ?>
         <time><?php the_time('l, F jS, Y') ?></time>
 
         <footer>
-          <?php the_tags('Tags: ', ', ', '<br />'); ?> 
+          <?php the_tags('Tags: ', ', ', '<br />'); ?>
           Posted in <?php the_category(', ') ?>
           | <?php edit_post_link('Edit', '', ' | '); ?>
           <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>

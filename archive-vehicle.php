@@ -1,13 +1,4 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
-
-/*
-Template Name: Inventory
-*/
-
 get_header();
 
 global $wp_query;
@@ -16,20 +7,26 @@ if($pagenum='') $pagenum = 1;
 $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&paged=" . $page_num );
 ?>
 
-<div id="main" role="main" class="container_12">
-  <?php get_sidebar(); ?>
+<div id="main" class="container_12 vehicles">
+  <div class="grid_12 top-widget-zones" id="top-widget-zone">
+    <?php dynamic_sidebar("top-widget-zone"); ?>
+  </div>
+
+  <?php include_once('sidebar.php'); ?>
+
   <?php if (have_posts()) : ?>
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-      <?php if ( has_nav_menu('sidebar') ) { $grid = 10; } else { $grid = 12; } ?>
       <article <?php post_class('inventory grid_' . $grid) ?> id="post-<?php the_ID(); ?>">
-        <header>
-          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-          <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
-        </header>
-        <section>
-          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-          <?php the_excerpt('Read more &#9660;'); ?>
-        </section>
+        <div class="vehicle">
+          <header>
+            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
+          </header>
+          <section>
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+            <?php the_excerpt(); ?>
+          </section>
+        </div>
       </article>
     <?php endwhile; ?>
     <nav>
@@ -48,6 +45,10 @@ $wp_query = new WP_Query( "showposts=20&post_type=vehicle&post_status=publish&pa
       </section>
     </article>
   <?php endif; ?>
+
+  <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
+    <?php dynamic_sidebar("bottom-widget-zone"); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>

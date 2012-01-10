@@ -1,17 +1,11 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
-
 /*
 Template Name: Links
 */
+
+get_header();
+get_sidebar(); 
 ?>
-
-<?php get_header(); ?>
-
-<?php get_sidebar(); ?>
 
 <div id="main">
 

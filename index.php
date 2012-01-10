@@ -1,11 +1,7 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
 get_header(); ?>
 
-<div id="main" class="container_12">
+<div id="main" class="container_12 blog">
   <div class="grid_12 top-widget-zones" id="top-widget-zone">
     <?php dynamic_sidebar("top-widget-zone"); ?>
   </div>
@@ -22,9 +18,15 @@ get_header(); ?>
           </header>
           <section>
             <?php if ( has_post_thumbnail() ) { ?>
-            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+              <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
             <?php } ?>
-            <?php the_excerpt(); ?>
+            <?php 
+            if ( $ors_theme_options['use_excerpts'] == 0 ) {
+              the_content();
+            } else {
+              the_excerpt();
+            }
+            ?>
           </section>
         </article>
       <?php endwhile; ?>

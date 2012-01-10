@@ -1,12 +1,12 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
 
-if ( has_nav_menu('sidebar') or is_active_sidebar( $sidebar_widget_zone_id ) ) { $grid = 10; } else { $grid = 12; }
+if ( has_nav_menu('sidebar') or is_active_sidebar( $sidebar_widget_zone_id ) ) {
+  $grid = (12 - $ors_theme_options['grid_size']);
+} else {
+  $grid = 12;
+}
 
-if ( $grid == 10 ) echo "<aside id='sidebar-container' class='grid_2'>";
+if ( $grid != 12 ) echo "<aside id='sidebar-container' class='grid_" . $ors_theme_options['grid_size'] . "'>";
 
 if ( has_nav_menu('sidebar') ) {  
   dynamic_sidebar("above-menu-widget-zone");
@@ -22,4 +22,4 @@ if ( is_active_sidebar( $sidebar_widget_zone_id ) ) {
   <?php
 }
 
-if ( $grid == 10 ) echo "</aside>";
+if ( $grid != 12 ) echo "</aside>";

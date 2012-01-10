@@ -20,6 +20,8 @@ body{width:960px;margin:0 auto;font:12px 'Helvetica Neue',Helvetica,Arial,sans-s
 header,hgroup,nav,article,section,footer{display:block;overflow:hidden;}
 
 /* Un-Reset */
+#main aside {font: normal 9pt/11pt Helvetica; margin-top:10px;}
+#main article {font: normal 12pt/18pt Helvetica; margin-top:10px;}
 
 /* Header */
 header hgroup{text-align:center;}
@@ -73,20 +75,23 @@ header nav{margin:0!important;width:960px!important;background:#ccc;}
 #main{position:static;overflow:hidden;}
 #main .articles{margin-top:15px;}
 #main article{margin-bottom:7.5px;}
+#main article header{margin-bottom: 10px;}
 #main article header h2{margin:0;}
-#main article header h2 a{font:bold 16pt/20pt 'Helvetica Neue';}
-#main article header time{display:none;}
+#main article header h2 a{font-weight:bold;}
+#main article header time{font-size: smaller;}
 #main article .attachment-thumbnail{float:left;clear:left;margin-right:20px;border:solid 1px black;}
 #main article h1,
 #main article h2,
 #main article h3{margin-bottom: 10px;}
 #main article p,
 #main article ul,
-#main article ol{margin-bottom:8px;font:normal 12pt/18pt "Helvetica Neue",Arial,Helvetica,sans-serif;overflow:hidden;}
-#main article .featured-image {margin:10px;}
+#main article ol{margin-bottom:8px;overflow:hidden;}
+#main article .featured-image {margin:10px;text-align:center;}
+#main article .featured-image img{border:solid 1px black;}
 #main table tr th,
 #main table tr td {font-size: 12pt}
-#main .gallery .gallery-item{display:inline-block;float:left;}
+#main .gallery{text-align:center;}
+#main .gallery .gallery-item{display:inline-block;}
 #main .gallery .gallery-item .gallery-icon a{text-decoration:none;border:none;}
 #main .gallery .gallery-item .gallery-icon img{margin:10px;border:solid 1px black;}
 #main #sidebar{overflow:hidden;padding:10px 0;}
@@ -94,9 +99,10 @@ header nav{margin:0!important;width:960px!important;background:#ccc;}
 #main aside{float:left;clear:left;}
 
 /* Inventory */
-article.inventory{border:solid 1px #ccc;border-radius:5px;}
-article.inventory header h2{padding:2px 5px;border-bottom:solid 1px #ccc;background:#eee;}
-article.inventory section{padding:5px!important;overflow:hidden;}
+article.inventory .vehicle{border:solid 1px #ccc;border-radius:5px;}
+article.inventory .vehicle header h2{padding:2px 5px;border-bottom:solid 1px #ccc;background:#eee;}
+article.inventory .vehicle time{display:none;}
+article.inventory .vehicle section{padding:5px!important;overflow:hidden;}
 
 /* Footer */
 footer{clear:both;}

@@ -1,11 +1,7 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
 get_header(); ?>
 
-<div id="main" class="container_12">
+<div id="main" class="container_12 page">
   <div class="grid_12 top-widget-zones" id="top-widget-zone">
     <?php dynamic_sidebar("top-widget-zone"); ?>
   </div>
@@ -21,7 +17,7 @@ get_header(); ?>
              <?php the_post_thumbnail( $post->ID, 'large' ); ?>
           </div>
           <?php } ?>
-          <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+          <?php the_content(); ?>
           <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
         </section>
       </article>

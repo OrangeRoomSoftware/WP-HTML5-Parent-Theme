@@ -1,10 +1,3 @@
-    <?php
-    /**
-     * @package WordPress
-     * @subpackage HTML5_Boilerplate
-     */
-    ?>
-
     <footer class="container_12">
       <?php
         if ( has_nav_menu('bottom') ) {
