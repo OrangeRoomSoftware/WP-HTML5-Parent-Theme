@@ -18,7 +18,7 @@ get_header(); ?>
     <section>
       <?php if ( has_post_thumbnail( $post->ID ) ) { ?>
       <div class="featured-image">
-        <?php the_post_thumbnail( $post->ID, 'large' ); ?>
+        <?php the_post_thumbnail( 'large' ); ?>
       </div>
       <?php } ?>
       <?php the_content(); ?>
