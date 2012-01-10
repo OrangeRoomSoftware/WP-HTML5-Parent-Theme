@@ -1,9 +1,4 @@
 <?php
-/**
- * @package WordPress
- * @subpackage HTML5_Boilerplate
- */
-
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
 define('ORS_TEMPLATE_DIR', dirname(__FILE__));
 
@@ -58,15 +53,22 @@ $bottom_widget_zone_id = register_sidebar( array('name' => 'Bottom Widget Zone',
 $footer_widget_zone_id = register_sidebar( array('name' => 'Footer Widget Zone',  'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 
 /**
+ * Load Options
+ */
+$ors_theme_options = get_option( 'ors_theme_options' );
+
+/**
  * Stylesheets
  *
  * 960 and theme style
  */
-function ors_stylesheets() {
-  wp_enqueue_style('ors-style', get_bloginfo('stylesheet_url'), 'ors-960', null, 'all');
-}
-if (!is_admin()) {
-  add_action('wp_print_styles', 'ors_stylesheets', 1);
+if ( !function_exists('ors_stylesheets') ) {
+	function ors_stylesheets() {
+	  wp_enqueue_style('ors-style', get_bloginfo('stylesheet_url'), 'ors-960', null, 'all');
+	}
+	if (!is_admin()) {
+	  add_action('wp_print_styles', 'ors_stylesheets', 1);
+	}
 }
 
 /**
@@ -83,14 +85,6 @@ if (!function_exists('ors_javascripts')) {
 	  add_action('wp_print_scripts', 'ors_javascripts', 5);
 	}
 }
-
-/**
- * Increase the excerpt length
- */
-function twentyten_excerpt_length( $length ) {
-  return 500;
-}
-add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
 
 /**
  * Get your CSS out of my Content!
@@ -111,3 +105,8 @@ if ( !function_exists('permalink_shortcode_handler') ) {
   }
   add_shortcode('permalink', 'permalink_shortcode_handler');
 }
+
+/**
+ * Theme Admin Options
+ */
+require_once ( get_template_directory() . '/theme-options.php' );

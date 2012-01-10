@@ -1,12 +1,11 @@
 <?php
-/**
-* @package WordPress
-* @subpackage California Motors
-* Template Name: Home Page
+/*
+Template Name: Home Page
 */
+
 get_header(); ?>
 
-<div id="main" class="container_12">
+<div id="main" class="container_12 home-page">
   <div class="grid_12 top-widget-zones" id="top-widget-zone">
     <?php dynamic_sidebar("top-widget-zone"); ?>
   </div>
