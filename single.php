@@ -33,6 +33,9 @@ get_header(); ?>
     <p>Sorry, no posts matched your criteria.</p>
   <?php endif; ?>
 
+  <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
+    <?php dynamic_sidebar("bottom-widget-zone"); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>

@@ -20,7 +20,7 @@ get_header(); ?>
             <?php if ( has_post_thumbnail() ) { ?>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
             <?php } ?>
-            <?php 
+            <?php
             if ( $ors_theme_options['use_excerpts'] == 0 ) {
               the_content();
             } else {
@@ -46,6 +46,10 @@ get_header(); ?>
       </section>
     </article>
   <?php endif; ?>
+
+  <div class="grid_12 bottom-widget-zones" id="bottom-widget-zone">
+    <?php dynamic_sidebar("bottom-widget-zone"); ?>
+  </div>
 </div>
 
 <?php get_footer(); ?>
