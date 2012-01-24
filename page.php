@@ -12,7 +12,7 @@ get_header(); ?>
     <?php while (have_posts()) : the_post(); ?>
       <article <?php post_class('grid_' . $grid) ?> id="page-<?php the_ID(); ?>">
         <section>
-          <?php if ( has_post_thumbnail( $post->ID ) ) { ?>
+          <?php if ( has_post_thumbnail( $post->ID ) and !strstr($content, '[slideshow') and !get_post_type() ) { ?>
           <div class="featured-image">
              <?php the_post_thumbnail( 'large' ); ?>
           </div>
