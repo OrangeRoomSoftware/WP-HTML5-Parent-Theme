@@ -109,7 +109,7 @@ function theme_options_do_page() {
 						</select>
 					</td>
 				</tr>
-
+			</table>
 			<p class="submit">
 				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'orstheme' ); ?>" />
 			</p>
