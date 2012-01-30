@@ -30,10 +30,16 @@ get_header(); ?>
           </section>
         </article>
       <?php endwhile; ?>
+
+      <?php
+      if ( function_exists( 'wp_paginate' ) ) {
+        wp_paginate();
+      } else { ?>
       <nav>
         <div id="older"><?php next_posts_link('&#9664; Older Entries') ?></div>
         <div id="newer"><?php previous_posts_link('Newer Entries &#9654;') ?></div>
       </nav>
+      <?php } ?>
     </div>
   <?php else : ?>
     <article <?php post_class('grid_12') ?> id="404-not-found">

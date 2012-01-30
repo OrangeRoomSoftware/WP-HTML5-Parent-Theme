@@ -98,6 +98,17 @@ header nav{margin:0!important;width:960px!important;background:#ccc;}
 
 #main aside{float:left;clear:left;}
 
+#main .articles nav #older {float:left;}
+#main .articles nav #newer {float:right;}
+
+#main .articles nav .wp-paginate{text-align:center;}
+#main .articles nav .wp-paginate .title{display:none;}
+#main .articles nav .wp-paginate li{display:inline;padding:0;margin:0;}
+#main .articles nav .wp-paginate .page,
+#main .articles nav .wp-paginate .prev,
+#main .articles nav .wp-paginate .next{display:inline-block;padding:5px 10px;margin:5px;color:black;background:#eee;font-size:10pt;border:solid 1px #888;border-radius:3px;}
+#main .articles nav .wp-paginate .current{background:white;}
+
 /* Inventory */
 article.inventory .vehicle{border:solid 1px #ccc;border-radius:5px;}
 article.inventory .vehicle header h2{padding:2px 5px;border-bottom:solid 1px #ccc;background:#eee;}
