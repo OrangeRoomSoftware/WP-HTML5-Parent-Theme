@@ -17,7 +17,7 @@ get_header(); ?>
             <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
           </header>
           <section>
-            <?php if ( has_post_thumbnail() ) { ?>
+            <?php if ( has_post_thumbnail( $post->ID ) and !strstr($content, '[slideshow') and !get_post_type() ) { ?>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
             <?php } ?>
             <?php
@@ -30,10 +30,16 @@ get_header(); ?>
           </section>
         </article>
       <?php endwhile; ?>
+
+      <?php
+      if ( function_exists( 'wp_paginate' ) ) {
+        wp_paginate();
+      } else { ?>
       <nav>
         <div id="older"><?php next_posts_link('&#9664; Older Entries') ?></div>
         <div id="newer"><?php previous_posts_link('Newer Entries &#9654;') ?></div>
       </nav>
+      <?php } ?>
     </div>
   <?php else : ?>
     <article <?php post_class('grid_12') ?> id="404-not-found">
