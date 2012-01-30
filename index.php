@@ -17,7 +17,7 @@ get_header(); ?>
             <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
           </header>
           <section>
-            <?php if ( has_post_thumbnail( $post->ID ) and !strstr($content, '[slideshow') and !get_post_type() ) { ?>
+            <?php if ( has_post_thumbnail( $post->ID ) ) { ?>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
             <?php } ?>
             <?php
