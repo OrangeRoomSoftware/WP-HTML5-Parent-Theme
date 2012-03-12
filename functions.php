@@ -43,6 +43,9 @@ if ( function_exists('register_sidebar') ) {
   ));
 }
 
+// Unregister default sidebar
+unregister_sidebar( 'sidebar-1' );
+
 // Register widget zones for Home Page template
 $top_widget_zone_id = register_sidebar( array('name' => 'Top Widget Zone',     'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
 $sidebar_widget_zone_id = register_sidebar( array('name' => 'Sidebar Widget Zone', 'before_widget' => '', 'after_widget' => '', 'before_title' => '', 'after_title' => '') );
