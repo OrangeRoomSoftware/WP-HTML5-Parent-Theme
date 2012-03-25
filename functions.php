@@ -1,6 +1,8 @@
 <?php
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
 define('ORS_TEMPLATE_DIR', dirname(__FILE__));
+define('CHILD_TEMPLATE_URL', get_bloginfo('stylesheet_directory'));
+define('CHILD_TEMPLATE_DIR', dirname(__FILE__));
 
 // Setup upload paths
 $uploads = wp_upload_dir();
