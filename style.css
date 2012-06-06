@@ -86,7 +86,7 @@ header nav{margin:0!important;width:960px!important;background:#ccc;}
 #main article h3{margin-bottom: 10px;}
 #main article p,
 #main article ul,
-#main article ol{margin-bottom:8px;overflow:hidden;}
+#main article ol{margin-bottom:8px;}
 #main article .featured-image {margin:10px;text-align:center;overflow:hidden;clear:both;}
 #main article .featured-image img{border:solid 1px black;}
 #main table tr th,
