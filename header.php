@@ -29,11 +29,13 @@
     }
     ?>
     <header class='container_12' <?php if ($background_image) echo 'style="background:url('.$background_image.') top left no-repeat;min-height:'.$background_size[1].'px;"'; ?>>
-      <hgroup class="grid_12" <?php if ($background_image) echo 'style="padding-top:'.$background_size[1].'px;"'; ?>>
-        <?php
+      <hgroup class="grid_12">
+        <?php 
         if (!$background_image) {
           echo '<h1><a href="' . get_option("home") . '/">' . get_bloginfo("name") . '</a></h1>';
           echo '<h2>' . get_bloginfo('description') . '</h2>';
+        } else {
+	  echo '<a href="' . get_option("home") . '/" style="display:block;width:100%; height:' . $background_size[1] . 'px"></a>';
         }
         ?>
       </hgroup>
