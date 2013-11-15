@@ -1,8 +1,8 @@
 <?php
 define('ORS_TEMPLATE_URL', get_bloginfo('template_url'));
 define('ORS_TEMPLATE_DIR', dirname(__FILE__));
-define('CHILD_TEMPLATE_URL', get_bloginfo('stylesheet_directory'));
-define('CHILD_TEMPLATE_DIR', dirname(__FILE__));
+define('CHILD_TEMPLATE_URL', get_stylesheet_directory_uri());
+define('CHILD_TEMPLATE_DIR', get_stylesheet_directory());
 
 // Setup upload paths
 $uploads = wp_upload_dir();
@@ -84,7 +84,10 @@ if ( !function_exists('ors_stylesheets') ) {
 if (!function_exists('ors_javascripts')) {
 	function ors_javascripts() {
 	  wp_enqueue_script('ors-html5-shiv', "http://html5shiv.googlecode.com/svn/trunk/html5.js", 'jquery', null);
-	  wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null);
+	  wp_enqueue_script('ors-custom', ORS_TEMPLATE_URL . "/script.js", 'jquery', null, true);
+          if (file_exists(CHILD_TEMPLATE_DIR . "/script.js") == true) {
+            wp_enqueue_script('ors-child-custom', CHILD_TEMPLATE_URL . "/script.js", 'jquery', null, true);
+          }
 	}
 	if (!is_admin()) {
 	  add_action('wp_print_scripts', 'ors_javascripts', 5);
